@@ -1,0 +1,602 @@
+@charset "utf-8";
+
+a{
+	text-decoration:none;
+}
+
+h1{
+	font-size:3rem; /* =48px */
+	margin-bottom:1.5rem; /* =24px */
+	line-height:1; /* =48px */
+	text-align:center;
+}
+
+h2{
+	font-size:2.25rem; /* =36px */
+	margin-bottom:1.5rem; /* =24px */
+	line-height:1.3333; /* =48px */
+}
+
+h3{
+	font-size:1.5rem; /* =24px */
+	margin-bottom:1.5rem; /* =24px */
+	line-height:1; /* =24px */
+}
+
+p{
+	font-size:0.875rem;
+	margin-bottom:10px;
+}
+
+img{
+	vertical-align:bottom;
+}
+
+dl,dt,dd{
+	margin:0;
+	padding:0;
+}
+
+div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,form,input,textarea,button,table,tr,th,td,article,aside,footer,header,hgroup,nav,section{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section{
+	margin-bottom:50px;
+}
+
+.rotate-anime {
+	width:300px;
+	height:300px;
+	animation: rotate-anime 10s linear infinite;
+}
+@keyframes rotate-anime {
+	0%  {transform: rotate(0);}
+	100%  {transform: rotate(360deg);}
+}
+
+
+
+
+/* @bt横に広がる */
+.button {
+	display: inline-block;
+	width: 30%;
+	height: 50px;
+	margin-bottom:20px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.button03{
+	position: relative;
+	z-index: 2;
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 50px;
+}
+.button03:hover {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+.button03::before,
+.button03::after {
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #333;
+}
+.button03::before {
+	right: 0;
+}
+.button03::after {
+	left: 0;
+}
+.button03:hover::before,
+.button03:hover::after {
+	width: 0;
+	background-color: #59b1eb;
+}
+
+
+/* @bt4 */
+.button04 {
+	position: relative;
+	z-index: 2;
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 50px;
+}
+.button04:hover {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+.button04::before,
+.button04::after {
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background-color: #333;
+}
+.button04::before {
+	top: 0;
+}
+.button04::after {
+	bottom: 0;
+}
+.button04:hover::before,
+.button04:hover::after {
+	height: 0;
+	background-color: #59b1eb;
+}
+
+
+/* @bt11 */
+.button11 {
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	border: 2px solid #333;
+	color: #333;
+	line-height: 50px;
+	overflow: hidden;
+}
+.button11:hover {
+	color: #fff;
+}
+.button11::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+.button11:hover::after {
+	background: #333;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+/* @bt四隅から線 */
+
+a.bt12{
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+	margin-bottom:30px;
+}
+.button12 {
+  border: 1px solid #ccc;
+  padding: 20px 100px;
+  position: relative;
+}
+
+.change-border01::after,
+.change-border01::before,
+.change-border01__inner::after,
+.change-border01__inner::before {
+  background-color: #3498db;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+/* 左上へ配置 */
+.change-border01::after {
+    height: 2px;
+    left: -1px;
+    top: -1px;
+    width: 0px;
+}
+/* 右下へ配置 */
+.change-border01::before {
+  bottom: -1px;
+  height: 2px;
+  right: -1px;
+  width: 0px;
+}
+/* 左下へ配置 */
+.change-border01__inner::after {
+  bottom: -1px;
+  height: 0px;
+  left: -1px;
+  width: 2px;
+}
+/* 右下へ配置 */
+.change-border01__inner::before {
+  height: 0px;
+  right: -1px;
+  top: -1px;
+  width: 2px;
+}
+
+/* hover */
+.change-border01:hover::after,
+.change-border01:hover::before {
+  width: 100%;
+  width: calc(100% + 1px);
+}
+.change-border01:hover .change-border01__inner::after,
+.change-border01:hover .change-border01__inner::before {
+  height: 100%;
+  height: calc(100% + 1px);
+}
+
+
+
+/* @btアイコンがアニメーション */
+#nav3 {
+	clear:both;
+    font-weight: bold;
+    list-style: none;
+}
+#nav3 li {
+    margin-bottom: 2px;
+}
+#nav3 li a {
+    text-decoration: none;
+    display: block;
+    color: #FFFFFF;
+    width: 160px;
+    padding: 5px 10px 5px 50px;
+    background: #999 url(../images/arrow1.png) no-repeat 3px center;
+}
+
+
+/* @bt文字が拡大 */
+#nav6 {
+	clear:both;
+    font-weight: bold;
+    list-style: none;
+}
+#nav6 li {
+    margin-bottom: 2px;
+}
+#nav6 li a {
+    text-decoration: none;
+    display: block;
+    color: #FFFFFF;
+		background-color:#000;
+    width: 160px;
+    padding:10px;
+		text-align:center;
+}
+
+
+/* @bt下線が伸びる */
+.bg_blue{
+	clear:both;
+	width:100%;
+	background-color:rgba(12, 149, 255, 0.6);
+	overflow:hidden;
+}
+
+.gnavi,
+.gnavi_under{
+	font-size:1rem;
+	display:block;
+	position:relative;
+	left:0;
+	top:0;
+	width:1000px;
+	margin:0 auto;
+}
+
+.gnavi li,
+.gnavi_under li{
+	float:left;
+	background-image:none;
+	border-bottom:none;
+	font-size:0.9375rem;
+	font-weight:normal;
+	text-align:center;
+	margin:0;
+	padding:0;
+	letter-spacing:1px;
+}
+
+.gnavi li:last-child,
+.gnavi_under li:last-child{
+	border-right:none;
+}
+
+.gnavi a,
+.gnavi_under a{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	width:200px;
+	color: #fff;
+	display: block;
+	text-decoration:none;
+	background:url(../common_img/vorder.gif) no-repeat left center;
+	padding:21px 0 19px 0;
+	margin:0;
+	border:none;
+	position: relative;
+}
+
+.gnavi a::after,
+.gnavi_under a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  background-color:#007bdb;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.gnavi a:hover::after,
+.gnavi_under a:hover::after{
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.icobutton {
+  /* フォントサイズを大きく */
+  font-size: 1.8em;
+  /* 中心に表示 */
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -42%);
+}
+.icobutton:hover,
+.icobutton:focus {
+  /* hover、focus時の背景色を透明に */
+  background: transparent;
+}
+
+
+
+/* @image1 */
+.image_box{
+	overflow:hidden;
+	margin-bottom:20px;
+}
+
+a.thumnail {
+    display: block;
+    overflow: hidden;
+    width: 40%;
+		margin:0 auto;
+}
+ 
+.image_box img {
+    height: auto;
+    -webkit-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    width: 100%;
+    vertical-align: bottom;
+}
+ 
+.image_box figure {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+ 
+.image_box figcaption {
+    background-color: rgba(0,0,0,0.6);
+    color: #FFF;
+    opacity: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    position: absolute;
+    text-align: center;
+    -webkit-transition:all 0.25s ease-in-out;
+        transition:all 0.25s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding-top: 25%;
+}
+ 
+a:hover>figure img {
+        transform: scale(1.3,1.3);
+        -webkit-transform:scale(1.3,1.3);
+        -moz-transform:scale(1.3,1.3);
+        -ms-transform:scale(1.3,1.3);
+        -o-transform:scale(1.3,1.3);
+}
+ 
+a:hover>figure figcaption {
+    opacity: 1;
+}
+
+
+/* @image2 */
+.bg-scale {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 200px 0;
+		background-color: #000;
+		margin-bottom:20px;
+}
+
+.bg-scale:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url(../images/sea.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.bg-scale:hover:after {
+	opacity:0.5;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.bg-scale .inner {
+    z-index: 1;
+    position: relative;
+}
+
+.bg-scale p{
+	color:#fff;
+	font-size:2rem;
+}
+
+
+
+
+figure.bg_orange{
+	width:30%;
+	margin:0 auto;
+	background: #ff6c00;
+}
+figure.bg_orange img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+figure.bg_orange:hover img {
+	opacity: .5;
+}
+
+
+
+/* @image3 */
+.list{
+	margin: 50px 50px 50px 50px;
+	list-style-type: none;
+	overflow: hidden;
+}
+.list li{
+	width:45%;
+	float:left;
+	margin: 20px 0;
+	float: left;
+	transition: .5s;
+}
+
+.list-mv02{
+	opacity: 0;
+}
+.mv02{
+	opacity: 1.0;
+}
+
+
+/* @image4 */
+.list-mv07{
+	opacity: 0;
+	transform: translate(0,60px); 
+	-webkit-transform: translate(0,60px); 
+}
+.mv07{
+	opacity: 1.0;
+	transform: translate(0,0); 
+	-webkit-transform: translate(0,0);
+}
+
+
+/* @image5 */
+.list-mv01{
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
+}
+.mv01{
+	transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+}
+
+
+
+
+
+
+/* @パララックス */
+.sr, .sr-seq,.sr-seq2 { visibility: hidden; }
+.box2{
+}
+.box2 h3 .title span{
+  position:relative;
+  display: inline-block;
+  letter-spacing: 8px;
+  font-size: 2.5em;
+}
+
+
+
+
+
+
+/* @文字縁取り */
+.outline {
+  font-size: 50px;
+  color: #fff;
+}
+
+.pattern1 .outline{
+-webkit-text-stroke-color: #000;
+-webkit-text-stroke-width: 1px;
+}
+
+.pattern2 .outline{
+text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+}
+
+.pattern3 .outline{
+text-shadow: black 1px 1px 0px, black -1px 1px 0px, black 1px -1px 0px, black -1px -1px 0px;
+
+-webkit-text-stroke-color: #000;
+-webkit-text-stroke-width: 1px;
+
+filter:dropshadow(color=#000000,offX= 0,offY=-1)
+dropshadow(color=#000000,offX= 1,offY= 0)
+dropshadow(color=#000000,offX= 0,offY= 1)
+}

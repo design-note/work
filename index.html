@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無題ドキュメント</title>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/animocons.min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.inview.js"></script>
+<script type="text/javascript" src="js/animocons.min.js"></script>
+<script>
+$(function() {
+    var $allMsg = $('#title');
+    var $wordList = $('#title').html().split("");
+    $('#title').html("");
+    $.each($wordList, function(idx, elem) {
+        var newEL = $("<span/>").text(elem).css({ opacity: 0 });
+        newEL.appendTo($allMsg);
+        newEL.delay(idx * 100);
+        newEL.animate({ opacity: 1 }, 1000);
+    });
+});
+</script>
+</head>
+
+<body>
+<h1 id="title">Sample Text</h1>
+<p>修正しました。</p>
+
+<div class="rotate-anime"><img src="images/star.png" alt=""/></div>
+
+<div class="field">
+	<section>
+	<h1>ボタン</h1>
+<!--bt横に広がる-->
+<p><a class="button button03" href="#" onclick="return false;">アニメーションボタン01</a></p>
+
+<!--bt上に広がる-->
+<p><a class="button button04" href="#" onclick="return false;">アニメーションボタン02</a></p>
+
+<!--bt中心から広がる-->
+<p><a class="button button11" href="#" onclick="return false;">アニメーションボタン03</a></p>
+
+	<!--bt四隅から広がる-->
+<p><a href="#" class="button12 change-border01"><span class="change-border01__inner">アニメーションボタン04</span></a></p>
+
+
+<!--btアイコンがアニメーション-->
+<script>
+$(function() {
+    $('#nav3 li a').hover(
+        function(){
+            $(this).stop().animate({ 'backgroundPosition': '15px' }, 200);
+        },
+        function () {	
+            $(this).stop().animate({ 'backgroundPosition': '0px' }, 200);
+        }
+    );
+});
+</script>
+<ul id="nav3">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="#">LINK</a></li>
+</ul>
+
+
+<!--btテキストが拡大-->
+<script>
+$(function() {
+     $('#nav6 li a').hover(
+        function(){
+            $(this).stop().animate({fontSize : '200%'},300);
+        },
+        function () {
+            $(this).stop().animate({fontSize: '100%'},300);
+        }
+    );
+});
+</script>
+<ul id="nav6">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">GALLERY</a></li>
+    <li><a href="#">LINK</a></li>
+</ul>
+
+
+<!--bt下線が広がる-->
+<div class="bg_blue">
+<ul class="gnavi_under">
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">GALLERY</a></li>
+<li><a href="#">LINK</a></li>
+</ul>
+</div>
+
+
+<!--btアニメーションボタン-->
+<button class="icobutton icobutton-3-ccc-2196f3">
+  <span class="fa fa-heart"></span>
+</button>
+
+<button class="icobutton icobutton-6-ccc-2196f3">
+  <span class="fa fa-heart"></span>
+</button>
+
+<button class="icobutton icobutton-9-ccc-2196f3">
+  <span class="fa fa-heart"></span>
+</button>
+
+<button class="icobutton icobutton-12-ccc-2196f3">
+  <span class="fa fa-heart"></span>
+</button>
+
+</section>
+
+
+
+
+<section>
+	<h1>画像</h1>
+	<div class="image_box"> <a href="#" class="thumnail">
+		<figure><img src="images/flower.jpg"  alt="">
+			<figcaption>画像アニメーション1</figcaption>
+		</figure>
+		</a> </div>
+	<div class="bg-scale">
+		<div class="inner">
+			<p>画像アニメーション2</p>
+		</div>
+	</div>
+	
+	
+	
+	<div class="bg-scale">
+		<div class="inner">
+			<p>画像アニメーション2</p>
+		</div>
+	</div>
+	
+	
+	
+<figure class="bg_orange"><img src="images/sun.jpg"></figure>
+
+
+
+<script>
+$(function() {
+	$('.list-mv02').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('mv02');
+		}
+		else{
+			$(this).stop().removeClass('mv02');
+		}
+	});
+});
+</script>
+<ul class="list">
+	<li class="list-mv02"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/SDIM1206.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv02"><img src="images/SDIM1206.jpg" alt=""/></li>
+</ul>
+
+
+
+<script>
+$(function() {
+	$('.list-mv07').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('mv07');
+		}
+		else{
+			$(this).stop().removeClass('mv07');
+		}
+	});
+});
+</script>
+<ul class="list">
+	<li class="list-mv07"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/SDIM1206.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv07"><img src="images/SDIM1206.jpg" alt=""/></li>
+</ul>
+
+
+
+<script>
+$(function() {
+	$('.list-mv01').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('mv01');
+		}
+		else{
+			$(this).stop().removeClass('mv01');
+		}
+	});
+});
+</script>
+<ul class="list">
+	<li class="list-mv01"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/SDIM1206.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_2138.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_1812.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_1900.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_2051.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/IMG_4030.jpg" alt=""/></li>
+	<li class="list-mv01"><img src="images/SDIM1206.jpg" alt=""/></li>
+</ul>
+
+	
+</section>
+
+
+
+
+<section>
+<script>
+inView('.someSelector')
+    .on('enter', doSomething)
+    .on('exit', el => {
+        el.style.opacity = 0.5;
+    });
+</script>
+</section>
+
+
+
+
+<section>
+<h1>パララックス</h1>
+<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+<div class="box box2">
+<!--拡大-->
+<img class="sr srOpt-scale_0f1-duration_2000-reset_true" src="images/text.jpg">
+<!--回転-->
+<img class="sr srOpt-scale_0f1-duration_2000-reset_true srRotate-0_0_360 srOffset-0_0_50_0" src="images/text.jpg">
+<!--連続でアニメーション-->
+<h3><span class="title spro"><span class="sr-seq srOpt-origin_top-scale_1-distance_40px-reset_true srInterval-200">A</span><span class="sr-seq">B</span><span class="sr-seq">C</span><span class="sr-seq">D</span><span class="sr-seq">E</span></span></h3>
+<!--連続でアニメーション-->
+<h3><span class="title spro"><span class="sr-seq1 srOpt-origin_top-scale_1-distance_40px-reset_true srInterval-200">D</span><span class="sr-seq1">E</span><span class="sr-seq1">S</span><span class="sr-seq1">I</span><span class="sr-seq1">G</span><span class="sr-seq1">N</span></span></h3>
+
+</div>
+</section>
+
+
+
+<h1>文字縁取り</h1>
+<section class="pattern1">
+<h1>テキストストロークを使用してでの方法</h1>
+<p class="outline">LIFE IS GOOD</p>
+</section>
+<section class="pattern2">
+<h1>テキストシャドウを使用してでの方法</h1>
+<p class="outline">LIFE IS GOOD</p>
+</section>
+<section class="pattern3">
+<h1>IE独自の方法＋テキストストローク＋ボックスシャドウ</h1>
+<p class="outline">LIFE IS GOOD</p>
+</section>
+
+
+</div>
+</body>
+</html>
